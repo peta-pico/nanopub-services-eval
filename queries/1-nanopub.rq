@@ -1,0 +1,7 @@
+prefix npa: <http://purl.org/nanopub/admin/>
+
+select ?np where {
+  graph npa:graph {
+    ?np npa:hasHeadGraph ?h .
+  }
+} limit 1

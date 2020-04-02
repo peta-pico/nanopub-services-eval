@@ -2,5 +2,5 @@
 
 while read I; do
   echo "LDF instance: $I"
-  # not doing anything here yet
+  time comunica-sparql $I -f queries/1-nanopub.rq
 done < ldf-instances.txt
