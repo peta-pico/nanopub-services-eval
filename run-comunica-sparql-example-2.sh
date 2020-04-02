@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This comunica-sparql example doesn't work:
+# This comunica-sparql example didn't work but does now:
 
 comunica-sparql http://ldf.nanopubs.lod.labs.vu.nl/np "
 prefix np: <http://www.nanopub.org/nschema#>
