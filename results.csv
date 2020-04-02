@@ -1,0 +1,12 @@
+01_one-nanopub,http://ldf.nanopubs.lod.labs.vu.nl/np,1.19,1
+01_one-nanopub,http://130.60.24.146:7882/np,1.23,1
+01_one-nanopub,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,1.51,1
+01_one-nanopub,http://ldf.np.scify.org/np,1.75,1
+01_one-nanopub,http://ldf.np.dumontierlab.com/np,1.23,1
+01_one-nanopub,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.23,1
+02_get_all_users,http://ldf.nanopubs.lod.labs.vu.nl/np,4.49,16
+02_get_all_users,http://130.60.24.146:7882/np,8.23,16
+02_get_all_users,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,6.25,16
+02_get_all_users,http://ldf.np.scify.org/np,12.33,19
+02_get_all_users,http://ldf.np.dumontierlab.com/np,4.73,16
+02_get_all_users,https://ldf.nanopubs.knows.idlab.ugent.be/np,5.56,16
