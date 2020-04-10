@@ -1,0 +1,7 @@
+prefix npa: <http://purl.org/nanopub/admin/>
+
+select (count(?np) as ?count) where {
+  graph npa:graph {
+    ?np npa:hasHeadGraph ?h .
+  }
+}

@@ -8,7 +8,7 @@ prefix npa: <http://purl.org/nanopub/admin/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-select ?user ?name ?intronp ?date ?pubkey where {
+select distinct ?user ?name ?intronp ?date ?pubkey where {
   graph npa:graph {
     ?intronp npa:hasHeadGraph ?h .
     ?intronp npa:hasValidSignatureForPublicKey ?pubkey .

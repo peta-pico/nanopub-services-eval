@@ -10,7 +10,7 @@ for Q in queries/*.rq; do
     IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
     mkdir -p output/$IX/$QX
     (
-      time -p comunica-sparql $I -f $Q \
+      time -p timeout 60 comunica-sparql $I -f $Q \
         > output/$IX/$QX/query-results.json
     ) \
       2> output/$IX/$QX/time.txt
