@@ -1,10 +1,14 @@
+#+ summary: Get all users, i.e. nanopublication creators that are linked to a valid signature
+#+ method: GET
+#+ endpoint_in_url: False
+
 prefix np: <http://www.nanopub.org/nschema#>
 prefix npx: <http://purl.org/nanopub/x/>
 prefix npa: <http://purl.org/nanopub/admin/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix foaf: <http://xmlns.com/foaf/0.1/>
 
-select distinct ?user ?name ?intronp ?date ?pubkey where {
+select ?user ?name ?intronp ?date ?pubkey where {
   graph npa:graph {
     ?intronp npa:hasHeadGraph ?h .
     ?intronp npa:hasValidSignatureForPublicKey ?pubkey .
@@ -21,8 +25,8 @@ select distinct ?user ?name ?intronp ?date ?pubkey where {
   }
   filter not exists {
     graph npa:graph {
-      ?retraction npa:hasValidSignatureForPublicKey ?retractionpubkey .
       ?retraction npa:hasHeadGraph ?rh .
+      ?retraction npa:hasValidSignatureForPublicKey ?pubkey .
     }
     graph ?rh {
       ?retraction np:hasAssertion ?ra .
@@ -30,12 +34,11 @@ select distinct ?user ?name ?intronp ?date ?pubkey where {
     graph ?ra {
       ?somebody npx:retracts ?intronp .
     }
-    filter (?retractionpubkey = ?pubkey)
   }
   filter not exists {
     graph npa:graph {
-      ?superseding npa:hasValidSignatureForPublicKey ?supersedingpubkey .
       ?superseding npa:hasHeadGraph ?sh .
+      ?superseding npa:hasValidSignatureForPublicKey ?pubkey .
     }
     graph ?sh {
       ?superseding np:hasPublicationInfo ?si .
@@ -43,7 +46,6 @@ select distinct ?user ?name ?intronp ?date ?pubkey where {
     graph ?si {
       ?superseding npx:supersedes ?intronp .
     }
-    filter (?supersedingpubkey = ?pubkey)
   }
 }
 order by ?user desc(?date)
