@@ -22,3 +22,9 @@
 04_get_nanopub_count,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.02,0
 04_get_nanopub_count,http://ldf.np.dumontierlab.com/np,60.02,0
 04_get_nanopub_count,https://ldf.nanopubs.knows.idlab.ugent.be/np,60.01,0
+05_find_nanopubs_with_type,http://ldf.nanopubs.lod.labs.vu.nl/np,13.30,158
+05_find_nanopubs_with_type,http://ldf.np.scify.org/np,50.48,158
+05_find_nanopubs_with_type,http://130.60.24.146:7882/np,34.36,158
+05_find_nanopubs_with_type,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,20.09,158
+05_find_nanopubs_with_type,http://ldf.np.dumontierlab.com/np,15.21,158
+05_find_nanopubs_with_type,https://ldf.nanopubs.knows.idlab.ugent.be/np,20.27,158

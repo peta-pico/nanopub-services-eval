@@ -1,0 +1,30 @@
+#+ summary: Find all nanopublications of the given type, in undefined order
+#+ method: GET
+#+ pagination: 1000
+#+ endpoint_in_url: False
+
+prefix np: <http://www.nanopub.org/nschema#>
+prefix npa: <http://purl.org/nanopub/admin/>
+prefix npx: <http://purl.org/nanopub/x/>
+prefix dct: <http://purl.org/dc/terms/>
+
+select ?np ?date ?pubkey where {
+  graph npa:graph {
+    ?np npa:hasHeadGraph ?h .
+    ?np npa:creationDay ?__day_iri .
+    ?np npa:creationMonth ?__month_iri .
+    ?np npa:creationYear ?__year_iri .
+    ?np dct:created ?date .
+  }
+  graph ?h {
+    ?np np:hasPublicationInfo ?i .
+  }
+  graph ?i {
+    ?np a npx:ExampleNanopub .
+  }
+  optional {
+    graph npa:graph {
+      ?np npa:hasValidSignatureForPublicKey ?pubkey .
+    }
+  }
+}
