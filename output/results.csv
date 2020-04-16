@@ -28,3 +28,9 @@
 05_find_nanopubs_with_type,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,20.09,158
 05_find_nanopubs_with_type,http://ldf.np.dumontierlab.com/np,15.21,158
 05_find_nanopubs_with_type,https://ldf.nanopubs.knows.idlab.ugent.be/np,20.27,158
+06_find_nanopubs_with_pattern,http://ldf.nanopubs.lod.labs.vu.nl/np,3.56,26
+06_find_nanopubs_with_pattern,http://ldf.np.scify.org/np,14.31,26
+06_find_nanopubs_with_pattern,http://130.60.24.146:7882/np,6.12,26
+06_find_nanopubs_with_pattern,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,4.64,26
+06_find_nanopubs_with_pattern,http://ldf.np.dumontierlab.com/np,4.82,26
+06_find_nanopubs_with_pattern,https://ldf.nanopubs.knows.idlab.ugent.be/np,4.64,26
