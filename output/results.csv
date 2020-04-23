@@ -1,36 +1,18 @@
-01_one-nanopub,http://ldf.nanopubs.lod.labs.vu.nl/np,1.19,1
-01_one-nanopub,http://ldf.np.scify.org/np,1.53,1
-01_one-nanopub,http://130.60.24.146:7882/np,1.24,1
-01_one-nanopub,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,1.46,1
-01_one-nanopub,http://ldf.np.dumontierlab.com/np,1.23,1
-01_one-nanopub,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.28,1
-02_get_all_users,http://ldf.nanopubs.lod.labs.vu.nl/np,9.63,26
-02_get_all_users,http://ldf.np.scify.org/np,28.24,26
-02_get_all_users,http://130.60.24.146:7882/np,17.25,26
-02_get_all_users,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,14.95,26
-02_get_all_users,http://ldf.np.dumontierlab.com/np,10.80,26
-02_get_all_users,https://ldf.nanopubs.knows.idlab.ugent.be/np,14.61,26
-03_get_backlinks,http://ldf.nanopubs.lod.labs.vu.nl/np,1.26,2
-03_get_backlinks,http://ldf.np.scify.org/np,1.58,2
-03_get_backlinks,http://130.60.24.146:7882/np,1.26,2
-03_get_backlinks,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,1.34,2
-03_get_backlinks,http://ldf.np.dumontierlab.com/np,1.22,2
-03_get_backlinks,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.29,2
-04_get_nanopub_count,http://ldf.nanopubs.lod.labs.vu.nl/np,60.02,0
-04_get_nanopub_count,http://ldf.np.scify.org/np,60.01,0
-04_get_nanopub_count,http://130.60.24.146:7882/np,60.02,0
-04_get_nanopub_count,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.02,0
-04_get_nanopub_count,http://ldf.np.dumontierlab.com/np,60.02,0
-04_get_nanopub_count,https://ldf.nanopubs.knows.idlab.ugent.be/np,60.01,0
-05_find_nanopubs_with_type,http://ldf.nanopubs.lod.labs.vu.nl/np,13.30,158
-05_find_nanopubs_with_type,http://ldf.np.scify.org/np,50.48,158
-05_find_nanopubs_with_type,http://130.60.24.146:7882/np,34.36,158
-05_find_nanopubs_with_type,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,20.09,158
-05_find_nanopubs_with_type,http://ldf.np.dumontierlab.com/np,15.21,158
-05_find_nanopubs_with_type,https://ldf.nanopubs.knows.idlab.ugent.be/np,20.27,158
-06_find_nanopubs_with_pattern,http://ldf.nanopubs.lod.labs.vu.nl/np,3.56,26
-06_find_nanopubs_with_pattern,http://ldf.np.scify.org/np,14.31,26
-06_find_nanopubs_with_pattern,http://130.60.24.146:7882/np,6.12,26
-06_find_nanopubs_with_pattern,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,4.64,26
-06_find_nanopubs_with_pattern,http://ldf.np.dumontierlab.com/np,4.82,26
-06_find_nanopubs_with_pattern,https://ldf.nanopubs.knows.idlab.ugent.be/np,4.64,26
+2020-04-23 17:05:12 +0200,01_one-nanopub,http://ldf.nanopubs.lod.labs.vu.nl/np,1.19,1
+2020-04-23 17:05:14 +0200,01_one-nanopub,http://ldf.np.scify.org/np,1.68,1
+2020-04-23 17:05:15 +0200,01_one-nanopub,http://130.60.24.146:7882/np,1.40,1
+2020-04-23 17:05:17 +0200,01_one-nanopub,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,2.33,1
+2020-04-23 17:05:19 +0200,01_one-nanopub,http://ldf.np.dumontierlab.com/np,1.17,1
+2020-04-23 17:05:20 +0200,01_one-nanopub,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.15,1
+2020-04-23 17:05:21 +0200,02_get_all_users,http://ldf.nanopubs.lod.labs.vu.nl/np,11.59,30
+2020-04-23 17:05:33 +0200,02_get_all_users,http://ldf.np.scify.org/np,9.64,0
+2020-04-23 17:05:43 +0200,02_get_all_users,http://130.60.24.146:7882/np,19.02,30
+2020-04-23 17:06:02 +0200,02_get_all_users,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.01,0
+2020-04-23 17:07:02 +0200,02_get_all_users,http://ldf.np.dumontierlab.com/np,11.96,29
+2020-04-23 17:07:14 +0200,02_get_all_users,https://ldf.nanopubs.knows.idlab.ugent.be/np,10.97,22
+2020-04-23 17:07:25 +0200,03_get_backlinks,http://ldf.nanopubs.lod.labs.vu.nl/np,1.07,2
+2020-04-23 17:07:26 +0200,03_get_backlinks,http://ldf.np.scify.org/np,1.41,2
+2020-04-23 17:07:27 +0200,03_get_backlinks,http://130.60.24.146:7882/np,1.15,2
+2020-04-23 17:07:28 +0200,03_get_backlinks,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,1.22,2
+2020-04-23 17:07:30 +0200,03_get_backlinks,http://ldf.np.dumontierlab.com/np,1.07,2
+2020-04-23 17:07:31 +0200,03_get_backlinks,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.16,2

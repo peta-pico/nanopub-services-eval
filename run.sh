@@ -15,13 +15,14 @@ run_query_on_instance () {
   QX=`echo $Q | sed -r 's/^queries\/(.*)\.rq$/\1/'`
   IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
   mkdir -p output/files/$IX/$QX
+  DATE=$(date +"%Y-%m-%d %T %z")
   (
     time -p timeout 60 comunica-sparql $I -f $Q \
       > output/files/$IX/$QX/query-results.json
   ) \
-    2> output/files/$IX/$QX/time.txt
-  echo -n "$QX,$I," >> output/results.csv
-  cat output/files/$IX/$QX/time.txt | grep "real" | sed "s/real //" | tr -d \\n >> output/results.csv
+    > output/files/$IX/$QX/out.txt 2>&1
+  echo -n "$DATE,$QX,$I," >> output/results.csv
+  cat output/files/$IX/$QX/out.txt | grep "real" | head -1 | sed "s/real //" | tr -d \\n >> output/results.csv
   echo -n "," >> output/results.csv
   cat output/files/$IX/$QX/query-results.json | egrep "^{" | wc -l >> output/results.csv
 }
