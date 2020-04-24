@@ -1,6 +1,6 @@
-2020-04-24 16:26:08 +0200,01_get_all_users,http://grlc.nanopubs.lod.labs.vu.nl/api/local/local/,0.17,30
-2020-04-24 16:26:09 +0200,get_all_users,http://grlc.np.scify.org/api/local/local/,4.63,30
-2020-04-24 16:26:13 +0200,get_all_users,http://130.60.24.146:7881/api/local/local/,1.75,30
-2020-04-24 16:26:15 +0200,get_all_users,https://openphacts.cs.man.ac.uk/nanopub/grlc/api/local/local/,0.43,29
-2020-04-24 16:26:15 +0200,get_all_users,http://grlc.np.dumontierlab.com/api/local/local/,0.15,29
-2020-04-24 16:26:16 +0200,get_all_users,https://grlc.nanopubs.knows.idlab.ugent.be/api/local/local/,2.01,30
+2020-04-24 16:42:14 +0200,01_get_all_users,http://grlc.nanopubs.lod.labs.vu.nl/api/local/local/,0.19,30
+2020-04-24 16:42:14 +0200,get_all_users,http://grlc.np.scify.org/api/local/local/,0.31,30
+2020-04-24 16:42:14 +0200,get_all_users,http://130.60.24.146:7881/api/local/local/,1.97,30
+2020-04-24 16:42:16 +0200,get_all_users,https://openphacts.cs.man.ac.uk/nanopub/grlc/api/local/local/,0.37,29
+2020-04-24 16:42:17 +0200,get_all_users,http://grlc.np.dumontierlab.com/api/local/local/,0.18,29
+2020-04-24 16:42:17 +0200,get_all_users,https://grlc.nanopubs.knows.idlab.ugent.be/api/local/local/,0.18,30

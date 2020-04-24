@@ -12,7 +12,7 @@ run_query_on_instance () {
   Q=$1
   I=$2
   echo "Trying LDF instance $I"
-  QX=`echo $Q | sed -r 's/^queries\/(.*)\.rq$/\1/'`
+  QX=`echo $Q | sed -r 's/^ldf-queries\/(.*)\.rq$/\1/'`
   IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
   mkdir -p output/ldf-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
@@ -29,7 +29,8 @@ run_query_on_instance () {
 
 if [ $# -eq 0 ]; then
   rm -f output/ldf-results.csv
-  for Q in queries/*.rq; do
+  rm -rf output/ldf-files
+  for Q in ldf-queries/*.rq; do
     run_query $Q
   done
 elif [ $# -eq 1 ]; then

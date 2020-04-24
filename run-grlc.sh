@@ -33,6 +33,7 @@ run_query_on_instance () {
 
 if [ $# -eq 0 ]; then
   rm -f output/grlc-results.csv
+  rm -rf output/grlc-files
   while read Q; do
     run_query $Q
   done < grlc-queries.txt
