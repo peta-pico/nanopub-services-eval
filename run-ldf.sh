@@ -14,21 +14,21 @@ run_query_on_instance () {
   echo "Trying LDF instance $I"
   QX=`echo $Q | sed -r 's/^queries\/(.*)\.rq$/\1/'`
   IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
-  mkdir -p output/files/$IX/$QX
+  mkdir -p output/ldf-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
   (
     time -p timeout 60 comunica-sparql $I -f $Q \
-      > output/files/$IX/$QX/query-results.json
+      > output/ldf-files/$IX/$QX/query-results.json
   ) \
-    > output/files/$IX/$QX/out.txt 2>&1
-  echo -n "$DATE,$QX,$I," >> output/results.csv
-  cat output/files/$IX/$QX/out.txt | grep "real" | head -1 | sed "s/real //" | tr -d \\n >> output/results.csv
-  echo -n "," >> output/results.csv
-  cat output/files/$IX/$QX/query-results.json | egrep "^{" | wc -l >> output/results.csv
+    > output/ldf-files/$IX/$QX/out.txt 2>&1
+  echo -n "$DATE,$QX,$I," >> output/ldf-results.csv
+  cat output/ldf-files/$IX/$QX/out.txt | grep "real" | head -1 | sed "s/real //" | tr -d \\n >> output/ldf-results.csv
+  echo -n "," >> output/ldf-results.csv
+  cat output/ldf-files/$IX/$QX/query-results.json | egrep "^{" | wc -l >> output/ldf-results.csv
 }
 
 if [ $# -eq 0 ]; then
-  rm -f output/results.csv
+  rm -f output/ldf-results.csv
   for Q in queries/*.rq; do
     run_query $Q
   done
