@@ -4,28 +4,28 @@ set -e
 
 run_query () {
   Q=$1
-  echo "Using query $Q"
+  QX=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\2/'`
+  echo "Using query $QX"
   while read I; do
     run_query_on_instance $Q $I
   done < grlc-instances.txt
 }
 
 run_query_on_instance () {
-  Q=$1
-  I=$2
+  QUERY=$1
+  INSTANCE=$2
   echo "Trying LDF instance $I"
-  QX=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\1/'`
-  Q=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\2/'`
-  IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
-  echo "$I $Q $IX $QX"
+  QX=`echo $QUERY | sed -r 's/^([^ ]*):(.*)$/\1/'`
+  QUERY=`echo $QUERY | sed -r 's/^([^ ]*):(.*)$/\2/'`
+  IX=`echo $INSTANCE | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
   mkdir -p output/grlc-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
   (
-    time -p curl -X GET "$I$Q" -H "accept: text/csv" \
+    time -p curl -X GET "$INSTANCE$QUERY" -H "accept: text/csv" \
       > output/grlc-files/$IX/$QX/query-results.csv
   ) \
     > output/grlc-files/$IX/$QX/out.txt 2>&1
-  echo -n "$DATE,$QX,$I," >> output/grlc-results.csv
+  echo -n "$DATE,$QX,$INSTANCE," >> output/grlc-results.csv
   cat output/grlc-files/$IX/$QX/out.txt | egrep "^real" | head -1 | sed "s/real //" | tr -d \\n >> output/grlc-results.csv
   echo -n "," >> output/grlc-results.csv
   cat output/grlc-files/$IX/$QX/query-results.csv | sed '1d' | wc -l >> output/grlc-results.csv

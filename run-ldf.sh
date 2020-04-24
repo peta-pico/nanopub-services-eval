@@ -2,26 +2,27 @@
 
 run_query () {
   Q=$1
-  echo "Using query $Q"
+  QX=`echo $Q | sed -r 's/^ldf-queries\/(.*)\.rq$/\1/'`
+  echo "Using query $QX"
   while read I; do
     run_query_on_instance $Q $I
   done < ldf-instances.txt
 }
 
 run_query_on_instance () {
-  Q=$1
-  I=$2
+  QUERY=$1
+  INSTANCE=$2
   echo "Trying LDF instance $I"
-  QX=`echo $Q | sed -r 's/^ldf-queries\/(.*)\.rq$/\1/'`
-  IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
+  QX=`echo $QUERY | sed -r 's/^ldf-queries\/(.*)\.rq$/\1/'`
+  IX=`echo $INSTANCE | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
   mkdir -p output/ldf-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
   (
-    time -p timeout 60 comunica-sparql $I -f $Q \
+    time -p timeout 60 comunica-sparql $INSTANCE -f $QUERY \
       > output/ldf-files/$IX/$QX/query-results.json
   ) \
     > output/ldf-files/$IX/$QX/out.txt 2>&1
-  echo -n "$DATE,$QX,$I," >> output/ldf-results.csv
+  echo -n "$DATE,$QX,$INSTANCE," >> output/ldf-results.csv
   cat output/ldf-files/$IX/$QX/out.txt | grep "real" | head -1 | sed "s/real //" | tr -d \\n >> output/ldf-results.csv
   echo -n "," >> output/ldf-results.csv
   cat output/ldf-files/$IX/$QX/query-results.json | egrep "^{" | wc -l >> output/ldf-results.csv
