@@ -2,3 +2,4 @@
 /output/grlc-files
 /docker-output/files
 /scratch
+*.gz
