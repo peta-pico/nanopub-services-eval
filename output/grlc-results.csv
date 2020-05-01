@@ -4,3 +4,9 @@
 2020-05-01 13:37:26 +0200,01_find_nanopubs,https://openphacts.cs.man.ac.uk/nanopub/grlc/api/local/local/,0.36,1000
 2020-05-01 13:37:26 +0200,01_find_nanopubs,http://grlc.np.dumontierlab.com/api/local/local/,0.29,1000
 2020-05-01 13:37:26 +0200,01_find_nanopubs,https://grlc.nanopubs.knows.idlab.ugent.be/api/local/local/,0.35,1000
+2020-05-01 15:56:36 +0200,02_find_nanopubs_with_pattern,http://grlc.nanopubs.lod.labs.vu.nl/api/local/local/,3.48,30
+2020-05-01 15:56:40 +0200,02_find_nanopubs_with_pattern,http://grlc.np.scify.org/api/local/local/,0.75,30
+2020-05-01 15:56:40 +0200,02_find_nanopubs_with_pattern,http://130.60.24.146:7881/api/local/local/,0.42,30
+2020-05-01 15:56:41 +0200,02_find_nanopubs_with_pattern,https://openphacts.cs.man.ac.uk/nanopub/grlc/api/local/local/,0.30,30
+2020-05-01 15:56:41 +0200,02_find_nanopubs_with_pattern,http://grlc.np.dumontierlab.com/api/local/local/,0.13,30
+2020-05-01 15:56:41 +0200,02_find_nanopubs_with_pattern,https://grlc.nanopubs.knows.idlab.ugent.be/api/local/local/,0.21,30

@@ -1,1 +1,2 @@
 01_find_nanopubs:find_nanopubs?year=http%3A%2F%2Fpurl.org%2Fnanopub%2Fadmin%2Fdate%2F2020
+02_find_nanopubs_with_pattern:find_nanopubs_with_pattern?pred=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2Fknows
