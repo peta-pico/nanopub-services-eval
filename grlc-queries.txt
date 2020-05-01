@@ -1,2 +1,1 @@
-02_get_all_users:get_all_users
-03_get_backlinks:get_backlinks?np=http%3A%2F%2Fwww.nextprot.org%2Fnanopubs%23NX_P42771-1_PTM-0253_140.RAoMW0xMemwKEjCNWLFt8CgRmg_TGjfVSsh15hGfEmcz4
+01_find_nanopubs:find_nanopubs?year=http%3A%2F%2Fpurl.org%2Fnanopub%2Fadmin%2Fdate%2F2020

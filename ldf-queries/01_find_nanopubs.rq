@@ -1,0 +1,24 @@
+#+ summary: Find nanopublications
+#+ method: GET
+#+ pagination: 1000
+#+ endpoint_in_url: False
+
+prefix np: <http://www.nanopub.org/nschema#>
+prefix npa: <http://purl.org/nanopub/admin/>
+prefix dct: <http://purl.org/dc/terms/>
+
+select ?np ?date ?pubkey where {
+  graph npa:graph {
+    ?np npa:hasHeadGraph ?h .
+#    ?np npa:creationDay ?__day_iri .
+#    ?np npa:creationMonth ?__month_iri .
+    ?np npa:creationYear <http://purl.org/nanopub/admin/date/2020> .
+    ?np dct:created ?date .
+  }
+  optional {
+    graph npa:graph {
+      ?np npa:hasValidSignatureForPublicKey ?pubkey .
+    }
+  }
+}
+limit 1000
