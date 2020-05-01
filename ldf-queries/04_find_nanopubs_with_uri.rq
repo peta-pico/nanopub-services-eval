@@ -19,9 +19,9 @@ select ?np ?date ?pubkey where {
     ?np ?__graphpred_iri ?g .
   }
   graph ?g {
-    { <https://orcid.org/0000-0003-4727-9435> ?p ?o } union
-    { ?s <https://orcid.org/0000-0003-4727-9435> ?o } union
-    { ?s ?p <https://orcid.org/0000-0003-4727-9435> }
+    { <https://orcid.org/0000-0001-5118-256X> ?p ?o } union
+    { ?s <https://orcid.org/0000-0001-5118-256X> ?o } union
+    { ?s ?p <https://orcid.org/0000-0001-5118-256X> }
   }
   optional {
     graph npa:graph {
