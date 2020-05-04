@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 run_query () {
   Q=$1
@@ -18,6 +18,7 @@ run_query_on_instance () {
   mkdir -p output/ldf-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
   (
+    # Debug-level messages: comunica-sparql -l debug ...
     time -p timeout 60 comunica-sparql $INSTANCE -f $QUERY \
       > output/ldf-files/$IX/$QX/query-results.json
   ) \

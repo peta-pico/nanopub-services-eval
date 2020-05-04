@@ -34,3 +34,15 @@
 2020-05-04 14:03:32 +0200,08_find_signed_nanopubs_with_uri,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.01,17
 2020-05-04 14:04:32 +0200,08_find_signed_nanopubs_with_uri,http://ldf.np.dumontierlab.com/np,16.78,17
 2020-05-04 14:04:48 +0200,08_find_signed_nanopubs_with_uri,https://ldf.nanopubs.knows.idlab.ugent.be/np,19.65,17
+2020-05-04 14:18:26 +0200,09_get_all_indexes,http://ldf.nanopubs.lod.labs.vu.nl/np,60.01,0
+2020-05-04 14:19:26 +0200,09_get_all_indexes,http://ldf.np.scify.org/np,60.01,0
+2020-05-04 14:20:26 +0200,09_get_all_indexes,http://130.60.24.146:7882/np,60.03,0
+2020-05-04 14:21:26 +0200,09_get_all_indexes,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.01,0
+2020-05-04 14:22:26 +0200,09_get_all_indexes,http://ldf.np.dumontierlab.com/np,60.01,0
+2020-05-04 14:23:26 +0200,09_get_all_indexes,https://ldf.nanopubs.knows.idlab.ugent.be/np,60.02,0
+2020-05-04 14:24:49 +0200,10_get_all_users,http://ldf.nanopubs.lod.labs.vu.nl/np,19.46,38
+2020-05-04 14:25:09 +0200,10_get_all_users,http://ldf.np.scify.org/np,48.35,38
+2020-05-04 14:25:57 +0200,10_get_all_users,http://130.60.24.146:7882/np,23.63,34
+2020-05-04 14:26:21 +0200,10_get_all_users,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.01,0
+2020-05-04 14:27:21 +0200,10_get_all_users,http://ldf.np.dumontierlab.com/np,18.87,38
+2020-05-04 14:27:40 +0200,10_get_all_users,https://ldf.nanopubs.knows.idlab.ugent.be/np,19.90,38

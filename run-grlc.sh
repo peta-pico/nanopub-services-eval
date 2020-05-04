@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 run_query () {
   Q=$1
   QX=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\2/'`
@@ -21,7 +19,7 @@ run_query_on_instance () {
   mkdir -p output/grlc-files/$IX/$QX
   DATE=$(date +"%Y-%m-%d %T %z")
   (
-    time -p curl -X GET "$INSTANCE$QUERY" -H "accept: text/csv" \
+    time -p timeout 60 curl -X GET "$INSTANCE$QUERY" -H "accept: text/csv" \
       > output/grlc-files/$IX/$QX/query-results.csv
   ) \
     > output/grlc-files/$IX/$QX/out.txt 2>&1

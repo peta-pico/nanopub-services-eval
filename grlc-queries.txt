@@ -6,3 +6,5 @@
 06_find_signed_nanopubs_with_pattern:find_signed_nanopubs_with_pattern?pred=http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2Fknows
 07_find_signed_nanopubs_with_text:find_signed_nanopubs_with_text?text=john
 08_find_signed_nanopubs_with_uri:find_signed_nanopubs_with_uri?ref=https%3A%2F%2Forcid.org%2F0000-0001-5118-256X
+09_get_all_indexes:get_all_indexes
+10_get_all_users:get_all_users
