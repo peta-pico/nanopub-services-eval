@@ -8,3 +8,5 @@
 08_find_signed_nanopubs_with_uri:find_signed_nanopubs_with_uri?ref=https%3A%2F%2Forcid.org%2F0000-0001-5118-256X
 09_get_all_indexes:get_all_indexes
 10_get_all_users:get_all_users
+11_get_backlinks:get_backlinks?np=http%3A%2F%2Fpurl.org%2Fnp%2FRAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ
+12_get_deep_backlinks:get_deep_backlinks?np=http%3A%2F%2Fpurl.org%2Fnp%2FRAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ

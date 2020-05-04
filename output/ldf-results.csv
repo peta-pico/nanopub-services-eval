@@ -46,3 +46,9 @@
 2020-05-04 14:26:21 +0200,10_get_all_users,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,60.01,0
 2020-05-04 14:27:21 +0200,10_get_all_users,http://ldf.np.dumontierlab.com/np,18.87,38
 2020-05-04 14:27:40 +0200,10_get_all_users,https://ldf.nanopubs.knows.idlab.ugent.be/np,19.90,38
+2020-05-04 16:01:04 +0200,11_get_backlinks,http://ldf.nanopubs.lod.labs.vu.nl/np,1.12,13
+2020-05-04 16:01:06 +0200,11_get_backlinks,http://ldf.np.scify.org/np,1.42,13
+2020-05-04 16:01:07 +0200,11_get_backlinks,http://130.60.24.146:7882/np,1.13,13
+2020-05-04 16:01:08 +0200,11_get_backlinks,https://openphacts.cs.man.ac.uk/nanopub/ldf/np,1.22,13
+2020-05-04 16:01:09 +0200,11_get_backlinks,http://ldf.np.dumontierlab.com/np,1.07,13
+2020-05-04 16:01:10 +0200,11_get_backlinks,https://ldf.nanopubs.knows.idlab.ugent.be/np,1.20,13

@@ -1,0 +1,12 @@
+#+ summary: Get direct back-links for the given nanopublication
+#+ method: GET
+#+ pagination: 1000
+#+ endpoint_in_url: False
+
+prefix npa: <http://purl.org/nanopub/admin/>
+
+select ?linking_np ?pred where {
+  graph npa:networkGraph {
+    ?linking_np ?pred <http://purl.org/np/RAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ> .
+  }
+}
