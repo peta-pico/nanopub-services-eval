@@ -11,3 +11,4 @@
 11_get_backlinks:get_backlinks?np=http%3A%2F%2Fpurl.org%2Fnp%2FRAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ
 12_get_deep_backlinks:get_deep_backlinks?np=http%3A%2F%2Fpurl.org%2Fnp%2FRAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ
 13_get_latest_version:get_latest_version?np=http%3A%2F%2Fpurl.org%2Fnp%2FRAN2NkswPgPDod5NvLTaKzef7JT7IOn-sSCCp_yqrV2Wo
+14_get_nanopub_count:get_nanopub_count?month=http%3A%2F%2Fpurl.org%2Fnanopub%2Fadmin%2Fdate%2F2020-02

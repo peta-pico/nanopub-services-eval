@@ -1,0 +1,10 @@
+prefix npa: <http://purl.org/nanopub/admin/>
+
+select (count(?np) as ?count) where {
+  graph npa:graph {
+#    ?np npa:hasHeadGraph ?h .
+#    ?np npa:creationDay ?__day_iri .
+    ?np npa:creationMonth <http://purl.org/nanopub/admin/date/2020-02> .
+#    ?np npa:creationYear ?__year_iri .
+  }
+}
