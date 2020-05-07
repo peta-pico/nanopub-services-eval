@@ -1,5 +1,5 @@
 /output/ldf-files
 /output/grlc-files
-/docker-output/files
+/docker-output
 /scratch
 *.gz

@@ -7,7 +7,3 @@ Create Docker image:
 
     $ docker build -t nanopub/comunica-eval .
 
-
-## grlc calls
-
-    $ curl -X GET "http://grlc.nanopubs.lod.labs.vu.nl/api/local/local/get_all_users" -H  "accept: text/csv"

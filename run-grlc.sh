@@ -3,7 +3,8 @@
 run_query () {
   Q=$1
   QX=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\2/'`
-  echo "Using query $QX"
+  QN=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\1/'`
+  echo "Using query $QN"
   while read I; do
     run_query_on_instance $Q $I
   done < grlc-instances.txt
