@@ -12,7 +12,7 @@ run_query () {
 run_query_on_instance () {
   QUERY=$1
   INSTANCE=$2
-  echo "Trying grlc instance $I"
+  echo "Trying grlc instance $INSTANCE"
   QX=`echo $QUERY | sed -r 's/^([^ ]*):(.*)$/\1/'`
   QUERY=`echo $QUERY | sed -r 's/^([^ ]*):(.*)$/\2/'`
   IX=`echo $INSTANCE | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
