@@ -1,0 +1,74 @@
+prefix np: <http://www.nanopub.org/nschema#>
+prefix npa: <http://purl.org/nanopub/admin/>
+prefix npx: <http://purl.org/nanopub/x/>
+
+select ?person ?paper where {
+  graph npa:graph {
+    ?np1 npa:hasHeadGraph ?h1 .
+    ?np1 npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwUtewGCpT5vIfXYE1bmf/Uqu1ojqnWdYxv+ySO80ul8Gu7m8KoyPAwuvaPj0lvPtHrg000qMmkxzKhYknEjq8v7EerxZNYp5B3/3+5ZpuWOYAs78UnQVjbHSmDdmryr4D4VvvNIiUmd0yxci47dTFUj4DvfHnGd6hVe5+goqdcwIDAQAB" .
+    ?np2 npa:hasHeadGraph ?h2 .
+    ?np2 npa:hasValidSignatureForPublicKey ?pubkey2 .
+  }
+
+  graph ?h1 {
+    ?np1 np:hasAssertion ?a1 .
+  }
+  graph ?a1 {
+    <https://orcid.org/0000-0002-1267-0234> <http://xmlns.com/foaf/0.1/knows> ?person .
+  }
+  filter not exists {
+    graph npa:graph {
+      ?newversion1 npa:hasHeadGraph ?nh1 .
+      ?newversion1 npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwUtewGCpT5vIfXYE1bmf/Uqu1ojqnWdYxv+ySO80ul8Gu7m8KoyPAwuvaPj0lvPtHrg000qMmkxzKhYknEjq8v7EerxZNYp5B3/3+5ZpuWOYAs78UnQVjbHSmDdmryr4D4VvvNIiUmd0yxci47dTFUj4DvfHnGd6hVe5+goqdcwIDAQAB" .
+    }
+    graph ?nh1 {
+      ?newversion1 np:hasPublicationInfo ?ni1 .
+    }
+    graph ?ni1 {
+      ?newversion1 npx:supersedes ?np1 .
+    }
+  }
+  filter not exists {
+    graph npa:graph {
+      ?retraction1 npa:hasHeadGraph ?rh1 .
+      ?retraction1 npa:hasValidSignatureForPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwUtewGCpT5vIfXYE1bmf/Uqu1ojqnWdYxv+ySO80ul8Gu7m8KoyPAwuvaPj0lvPtHrg000qMmkxzKhYknEjq8v7EerxZNYp5B3/3+5ZpuWOYAs78UnQVjbHSmDdmryr4D4VvvNIiUmd0yxci47dTFUj4DvfHnGd6hVe5+goqdcwIDAQAB" .
+    }
+    graph ?rh1 {
+      ?retraction1 np:hasAssertion ?ra1 .
+    }
+    graph ?ra1 {
+      ?somebody1 npx:retracts ?np1 .
+    }
+  }
+
+  graph ?h2 {
+    ?np2 np:hasAssertion ?a2 .
+  }
+  graph ?a2 {
+    ?person <http://purl.org/petapico/o/paperclub#hasRead> ?paper .
+  }
+  filter not exists {
+    graph npa:graph {
+      ?newversion2 npa:hasHeadGraph ?nh2 .
+      ?newversion2 npa:hasValidSignatureForPublicKey ?pubkey2 .
+    }
+    graph ?nh2 {
+      ?newversion2 np:hasPublicationInfo ?ni2 .
+    }
+    graph ?ni2 {
+      ?newversion2 npx:supersedes ?np2 .
+    }
+  }
+  filter not exists {
+    graph npa:graph {
+      ?retraction2 npa:hasHeadGraph ?rh2 .
+      ?retraction2 npa:hasValidSignatureForPublicKey ?pubkey2 .
+    }
+    graph ?rh2 {
+      ?retraction2 np:hasAssertion ?ra2 .
+    }
+    graph ?ra2 {
+      ?somebody2 npx:retracts ?np2 .
+    }
+  }
+}

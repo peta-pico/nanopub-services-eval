@@ -1,0 +1,4 @@
+select ?person ?paper where {
+  <https://orcid.org/0000-0002-1267-0234> <http://xmlns.com/foaf/0.1/knows> ?person .
+  ?person <http://purl.org/petapico/o/paperclub#hasRead> ?paper .
+}
