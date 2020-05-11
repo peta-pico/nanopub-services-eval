@@ -5,3 +5,4 @@ select ?linking_np ?pred where {
     ?linking_np ?pred <http://purl.org/np/RAcS-hC0ZeMiUtaPz0PRoml6R61wA71lgjYZGa4zswKEQ> .
   }
 }
+limit 1000
