@@ -1,6 +1,6 @@
 version: '2'
 services:
   comunica-eval:
-    image: nanopub/comunica-eval
+    image: nanopub/services-eval
     volumes:
       - ./docker-output:/app/output
