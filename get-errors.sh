@@ -2,7 +2,7 @@
 #
 # Run like this:
 #
-#     $ ./get-errors.sh data/eval-output_ghent_20200513_103600 > scratch/ghent-errors.csv
+#     $ ./get-errors.sh data/extracted/eval-output_ghent_20200513_103600 > scratch/ghent-errors.csv
 #
 
 if [ $# -eq 1 ]; then
