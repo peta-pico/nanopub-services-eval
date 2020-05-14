@@ -24,7 +24,7 @@ Run the test:
 docker-compose up
 ```
 
-> Alternatively the `./run.sh` script can also be used
+Alternatively, you can also execute `./run.sh`.
 
 * It will run for about 30 minutes. It shouldn't need much of processor time, but it's still good to not run any other heavy processes at the same time.
 
