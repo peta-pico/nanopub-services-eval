@@ -11,7 +11,7 @@ if [ $# -eq 1 ]; then
     QX=`echo $Q | sed -r 's/^ldf-queries\/(.*)\.rq$/\1/'`
     while read I; do
       IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
-      E=$(cat $1/ldf-files/$IX/$QX/out.txt | grep -i "error" | head -1 | wc -l)
+      E=$(cat $1/ldf-files/$IX/$QX/out.txt | egrep -i "error|failed" | head -1 | wc -l)
       echo "ldf,$QX,$I,$E" 
     done < ldf-instances.txt
   done
@@ -21,7 +21,7 @@ if [ $# -eq 1 ]; then
       QX=`echo $Q | sed -r 's/^([^ ]*):(.*)$/\1/'`
       IX=`echo $I | sed -r 's/https?:\/\/([^\/]*)\/.*/\1/' | sed -r 's/[^0-9a-z]/-/g'`
       DIR=$1/grlc-files/$IX/$QX/
-      E=$((cat $DIR/out.txt ; (head -1 $DIR/query-results.csv | sed 's/<html>/error/')) | grep -i "error" | head -1 | wc -l)
+      E=$((cat $DIR/out.txt ; (head -1 $DIR/query-results.csv | sed 's/<html>/error/')) | egrep -i "error|failed" | head -1 | wc -l)
       echo "grlc,$QX,$I,$E" 
     done < grlc-instances.txt
   done < grlc-queries.txt
