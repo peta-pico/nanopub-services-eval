@@ -2,3 +2,4 @@
 /docker-output
 /data/extracted
 /scratch
+.~lock.*
