@@ -1,4 +1,4 @@
 /output
 /docker-output
+/data/extracted
 /scratch
-*.gz
