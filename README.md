@@ -1,13 +1,7 @@
 Nanopub Services Evaluation
 ===========================
 
-This repo contains the files for the evaluation of the [nanopub-services](https://github.com/peta-pico/nanopub-services).
-
-Create Docker image:
-
-```bash
-$ docker build -t nanopub/services-eval .
-```
+This repo contains the files for the performance evaluation of the [nanopub-services](https://github.com/peta-pico/nanopub-services).
 
 ## Run evaluation
 
@@ -31,3 +25,11 @@ Alternatively, you can also execute `./run.sh`.
 * The script will first test the LDF services of the network (6 of them)  with a set of queries, and then it will test the grlc services (also 6  of them) on roughly the same set of queries.
 
 * The container will create a directory `docker-output` (or just `output`, if you are not using Docker) and will write files in there. In the end, it will create a `.tar.gz` file with a timestamp containing results of the tests.
+
+
+## Creating Docker Image
+
+```bash
+$ docker build -t nanopub/services-eval .
+```
+
